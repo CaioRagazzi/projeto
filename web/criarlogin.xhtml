@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center>
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="userTxt" value="User:" />
+                    <p:inputText id="userTxt" value="#{usuariosBean.usuario.nome}" required="true" requiredMessage="User Obrigatório"/>
+                    <p:outputLabel for="email1Txt" value="Email:" />
+                    <p:inputText id="email1Txt" value="#{usuariosBean.usuario.email}" required="true" requiredMessage="Email Obrigatório"/>
+                    <p:outputLabel for="pwd11" value="Password:" />
+                    <p:password id="pwd11" value="#{usuariosBean.usuario.senha}" label="Password 1" required="true" requiredMessage="Senha Obrigatório" feedback="true"/>    
+                    <h:inputHidden/>
+                    <p:commandButton value="Create" action="#{usuariosBean.addUsuario}" ajax="false"/>
+                </h:panelGrid>
+                <p:messages id="messages" autoUpdate="true" closable="true" style="width: 18%"/>
+            </center>
+        </h:form>
+    </h:body>
+</html>
+

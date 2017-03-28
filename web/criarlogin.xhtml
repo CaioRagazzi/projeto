@@ -17,7 +17,7 @@
                     <p:outputLabel for="pwd11" value="Password:" />
                     <p:password id="pwd11" value="#{usuariosBean.usuario.senha}" label="Password 1" required="true" requiredMessage="Senha Obrigatório" feedback="true"/>    
                     <h:inputHidden/>
-                    <p:commandButton value="Createes" action="#{usuariosBean.addUsuario}" ajax="false"/>
+                    <p:commandButton value="Create" action="#{usuariosBean.addUsuario}" ajax="false"/>
                 </h:panelGrid>
                 <p:messages id="messages" autoUpdate="true" closable="true" style="width: 18%"/>
             </center>

@@ -15,11 +15,11 @@
                 </h:panelGrid> <br/>
                 <h:panelGrid columns="2">
                     <h:outputLabel for="loginTxt" value="User:" />
-                    <p:inputText id="loginTxt" value=""/>
+                    <p:inputText id="loginTxt" value="#{loginBean.usuario.nome}"/>
                     <h:outputLabel for="pwd1" value="Password:" />
-                    <p:password id="pwd1" value="" match="pwd2" label="Password 1" required="true" />
+                    <p:password id="pwd1" value="#{loginBean.usuario.senha}" label="Password 1" required="true" />
                     <h:inputHidden/>
-                    <p:commandButton value="Inserir"/>
+                    <p:commandButton value="Inserir" action="#{loginBean.login}" ajax="false"/>
                 </h:panelGrid>
                 <br/>
                 <p:commandLink value="Criar novo login" immediate="true" action="#{usuariosBean.novoLogin()}" ajax="false"/>

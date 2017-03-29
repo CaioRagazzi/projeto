@@ -8,8 +8,10 @@ package br.com.projetoteste.bean;
 import br.com.projetoteste.Usuario;
 import br.com.projetoteste.dao.UsuariosDao;
 import java.util.Objects;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 
 /**
@@ -70,7 +72,6 @@ public class UsuariosBean {
         return true;
     }
    
-    
     public String novoLogin(){
         return "criarlogin";
     }

@@ -7,6 +7,9 @@ package br.com.projetoteste.dao;
 
 import br.com.projetoteste.Usuario;
 import br.com.projetoteste.dao.util.HibernateUtil;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -15,10 +18,10 @@ import org.hibernate.Transaction;
  * @author Caio Ragazzi
  */
 public class UsuariosDao {
-    
+
     private Session sessao;
     private Transaction transacao;
-    
+
     public void addUsuario(Usuario p) {
 
         try {
@@ -41,5 +44,7 @@ public class UsuariosDao {
         }
 
     }
-    
+
+
+
 }
